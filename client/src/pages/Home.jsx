@@ -58,7 +58,7 @@ const Home = () => {
                 rotate: [0, 90, 90, 0],
                 borderRadius: ["10%", "10%", "50%", "10%"]
             }}
-            transition={{duration:5, ease:"easeInOut", repeat:Infinity, repeatDelay:1}}
+            transition={{duration:5, ease:"easeInOut", repeat:3, repeatDelay:1}}
             ></motion.div>     
 
         </motion.div>
@@ -66,16 +66,28 @@ const Home = () => {
         {/*Third Square*/}
         <motion.div 
         variants={gridSquareVariants}
-        className='bg-slate-800 aspect-square rounded-lg justify-center flex items-center gap-10'></motion.div>
+        className='bg-slate-800 aspect-square rounded-lg justify-center flex items-center gap-10'>
 
+            <motion.button 
+            whileTap={{scale:0.9}}
+            whileHover={{scale:1.1, backgroundColor:'whitesmoke', color:'black'}}
+            transition={{bounceDamping:10, bounceStiffness:600}}
+            className='bg-emerald-600 w-1/2 py-4 rounded-lg text-2xl text-gray-100 font-light tracking-wide'>
+            subscribe</motion.button>
+
+        </motion.div>
+        
+        {/*Fourth Square*/}
         <motion.div 
         variants={gridSquareVariants}
         className='bg-slate-800 aspect-square rounded-lg justify-center flex items-center gap-10'></motion.div>
 
+        {/*Fifth Square*/}
         <motion.div 
         variants={gridSquareVariants}
         className='bg-slate-800 aspect-square rounded-lg justify-center flex items-center gap-10'></motion.div>
 
+        {/*Sixth Square*/}
         <motion.div 
         variants={gridSquareVariants}
         className='bg-slate-800 aspect-square rounded-lg justify-center flex items-center gap-10'></motion.div>
