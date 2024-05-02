@@ -3,7 +3,7 @@ import {motion, useAnimationControls} from 'framer-motion'
 
 const containerVariants = {
     close: {
-        width: "5rem",
+        width: "3rem",
         transition: {
             type: "spring",
             damping: 15,
@@ -49,11 +49,11 @@ const Navigation = () => {
       >
 
         <div className='flex flex-row w-full justify-between place-items-center'>
-            <div className='w-6 h-6 mr-1 bg-gradient-to-br from-orange-400 to-amber-700 rounded-full'>
+            <div className='w-6 h-6 mr-5 bg-gradient-to-br from-orange-400 to-amber-700 rounded-full'>
                 
             </div>
             <button 
-            className='fa-solid fa-arrow-right side-nav-link'
+            className='fa-solid fa-arrow-right side-nav-link mr-2'
             onClick={()=>handleOpenCloseSideNavigation()}></button>
         </div>
       </motion.nav>
