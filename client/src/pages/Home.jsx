@@ -1,10 +1,16 @@
 import React from 'react';
 import SquareMotions from '../Components/SquareMotions';
+import Navigation from '../Components/Navigation';
 
 const Home = () => {
 
     return (
-        <SquareMotions />
+
+        <div>
+            <Navigation />
+            <SquareMotions />
+        </div>
+
     );
 }
 

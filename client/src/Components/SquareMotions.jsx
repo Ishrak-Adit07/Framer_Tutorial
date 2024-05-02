@@ -33,7 +33,7 @@ const SquareMotions = () => {
     const {scrollYProgress:completionProgress} = useScroll();
 
     return (
-      <div className='flex flex-col gap-10 overflow-x-hidden'>
+      <div className='flex flex-col gap-10 ml-20 overflow-x-hidden'>
         <motion.section 
           variants={gridContainerVariants} 
           initial="hidden"
@@ -43,7 +43,7 @@ const SquareMotions = () => {
           {/*First Square*/}
           <motion.div 
           variants={gridSquareVariants}
-          className='bg-slate-800 aspect-square rounded-lg justify-center flex items-center gap-10'>
+          className='bg-slate-500 aspect-square rounded-lg justify-center flex items-center gap-10'>
   
               <motion.div 
               className='w-20 h-20 bg-stone-100 rounded-lg'
@@ -64,7 +64,7 @@ const SquareMotions = () => {
           {/*Second Square*/}
           <motion.div 
           variants={gridSquareVariants}
-          className='bg-slate-800 aspect-square rounded-lg justify-center flex items-center gap-10'>
+          className='bg-slate-500 aspect-square rounded-lg justify-center flex items-center gap-10'>
   
               <motion.div 
               className='w-1/3 h-1/3 shadow-md bg-rose-400'
@@ -81,7 +81,7 @@ const SquareMotions = () => {
           {/*Third Square*/}
           <motion.div 
           variants={gridSquareVariants}
-          className='bg-slate-800 aspect-square rounded-lg justify-center flex items-center gap-10'>
+          className='bg-slate-500 aspect-square rounded-lg justify-center flex items-center gap-10'>
   
               <motion.button 
               whileTap={{scale:0.9}}
@@ -95,7 +95,7 @@ const SquareMotions = () => {
           {/*Fourth Square*/}
           <motion.div 
           variants={gridSquareVariants}
-          className='bg-slate-800 aspect-square rounded-lg justify-center flex items-center gap-10'>
+          className='bg-slate-500 aspect-square rounded-lg justify-center flex items-center gap-10'>
   
               <motion.div className='w-1/3 h-1/3 bg-orange-500 rounded-3xl cursor-grab' 
               drag
@@ -128,7 +128,7 @@ const SquareMotions = () => {
           {/*Sixth Square*/}
           <motion.div 
           variants={gridSquareVariants}
-          className='bg-slate-800 aspect-square rounded-lg justify-center flex items-center gap-10'>
+          className='bg-slate-500 aspect-square rounded-lg justify-center flex items-center gap-10'>
   
               <motion.svg
               xmlns="http://www.w3.org/2000/svg"
