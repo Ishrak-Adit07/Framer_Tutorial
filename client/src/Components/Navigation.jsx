@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {motion, useAnimationControls} from 'framer-motion'
+import NavigationLink from './NavigationLink';
 
 const containerVariants = {
     close: {
@@ -20,18 +21,30 @@ const containerVariants = {
     }
 }
 
+const arrowVariants = {
+    close: {
+        rotate: 360,
+    },
+    open: {
+        rotate: 180,
+    }
+}
+
 const Navigation = () => {
 
     const [isOpen, setIsOpen] = useState(false);
 
     const containerControls = useAnimationControls();
+    const arrowControls = useAnimationControls();
 
     useEffect(()=>{
         if(isOpen){
             containerControls.start("open");
+            arrowControls.start("open");
         }
         else{
             containerControls.start("close");
+            arrowControls.start("close");
         }
     }, [isOpen]);
 
@@ -52,10 +65,23 @@ const Navigation = () => {
             <div className='w-6 h-6 mr-5 bg-gradient-to-br from-orange-400 to-amber-700 rounded-full'>
                 
             </div>
-            <button 
+            <motion.button 
             className='fa-solid fa-arrow-right side-nav-link mr-2'
-            onClick={()=>handleOpenCloseSideNavigation()}></button>
+            onClick={()=>handleOpenCloseSideNavigation()}
+            variants={arrowVariants}
+            initial="close"
+            animate={arrowVariants}
+            transition={{
+                duration:0.5, ease: "easeInOut"
+            }}
+            >
+            </motion.button>
         </div>
+
+        <div className='flex gap-3'>
+        <i class="fa-solid fa-user-group"></i> {isOpen && <NavigationLink name={"Users"}/>}
+        </div>
+
       </motion.nav>
     </div>
   );
