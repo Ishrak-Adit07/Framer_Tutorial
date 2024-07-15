@@ -1,5 +1,4 @@
-import React from 'react';
-import { motion, reverseEasing, useScroll } from "framer-motion"
+import { motion, useScroll } from "framer-motion"
 
 const gridContainerVariants = {
     hidden: {opacity: 0}, 
@@ -33,7 +32,8 @@ const SquareMotions = () => {
     const {scrollYProgress:completionProgress} = useScroll();
 
     return (
-      <div className='flex flex-col gap-10 ml-20 overflow-x-hidden'>
+      <div className='flex flex-col justify-center items-center gap-10 ml-20 overflow-x-hidden mt-10'>
+        <h1><h1 className="text-4xl">This is Motions Section</h1></h1>
         <motion.section 
           variants={gridContainerVariants} 
           initial="hidden"
